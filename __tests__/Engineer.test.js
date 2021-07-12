@@ -7,6 +7,7 @@ describe("Engineer", () => {
         expect(engineer.name).toEqual("Ethan Harsh");
         expect(engineer.id).toEqual(1);
         expect(engineer.email).toEqual("ethan@ethanharsh.com");
+        expect(engineer.gitHub).toEqual("https://github.com/EthanHarsh");
         expect(engineer.getName()).toEqual("Ethan Harsh");
         expect(engineer.getId()).toEqual(1);
         expect(engineer.getEmail()).toEqual("ethan@ethanharsh.com");
