@@ -1,0 +1,306 @@
+.m-0 {
+    margin: 0;
+  }
+  
+  .m-0-bottom {
+    margin-bottom: 0;
+  }
+  .m-0-left {
+    margin-left: 0 !important;
+  }
+  
+  .m-05-left {
+    margin-left: 0.5rem;
+  }
+  
+  .m-05-bottom {
+    margin-bottom: 0.5rem;
+  }
+  
+  .m-1-top {
+    margin-top: 1rem;
+  }
+  
+  .m-1-vert {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  .m-1-sides {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+  
+  .m-1-left {
+    margin-left: 1rem !important;
+  }
+  
+  .m-1-right {
+    margin-right: 1rem !important;
+  }
+  
+  .m-1-bottom {
+    margin-bottom: 1rem !important;
+  }
+  
+  .m-25-top {
+    margin-top: 2.5rem !important;
+  }
+  
+  .m-25-bottom {
+    margin-bottom: 2.5rem !important;
+  }
+  
+  .m-25 {
+    margin: 2.5rem !important;
+  }
+  
+  .m-5-top {
+    margin-top: 5rem;
+  }
+  
+  .m-5-bottom {
+    margin-bottom: 5rem !important;
+  }
+  
+  .m-25-sides {
+    margin-left: 2.5rem;
+    margin-right: 2.5rem;
+  }
+  
+  .p-0 {
+    padding: 0 !important;
+  }
+  
+  .p-025 {
+    padding: 0.25rem !important;
+  }
+  
+  .p-05 {
+    padding: 0.5rem !important;
+  }
+  
+  .p-05-right {
+    padding-right: 0.5rem !important;
+  }
+  
+  .p-05-left {
+    padding-left: 0.5rem !important;
+  }
+  
+  .p-1 {
+    padding: 1rem !important;
+  }
+  
+  .p-1-right {
+    padding-right: 1rem !important;
+  }
+  
+  .p-1-vert {
+    padding-top: 1rem !important;
+    padding-bottom: 1rem !important;
+  }
+  
+  .p-25 {
+    padding: 2.5rem !important;
+  }
+  
+  .p-25-vert {
+    padding-top: 2.5rem !important;
+    padding-bottom: 2.5rem !important;
+  }
+  
+  .h-10 {
+    height: 10vh;
+  }
+  
+  .h-50 {
+    height: 50vh;
+  }
+  
+  .w-15 {
+    width: 15% !important;
+  }
+  
+  .w-20 {
+    width: 20% !important;
+  }
+  
+  .w-25 {
+    width: 25% !important;
+  }
+  
+  
+  .w-33 {
+    width: 33% !important;
+  }
+  
+  .w-65 {
+    width: 65% !important;
+  }
+  
+  .w-75 {
+    width: 75% !important;
+  }
+  
+  .w-80 {
+    width: 80% !important;
+  }
+  
+  .w-100 {
+    width: 100% !important;
+  }
+  
+  .w-100vw {
+    width: 100vw !important;
+  }
+  
+  .w-fit-content {
+    width: fit-content;
+  }
+  
+  .sticky {
+    position: fixed;
+    top: 0;
+    z-index: 100;
+  }
+  
+  
+  .text-med {
+    font-size: 1.25rem;
+  }
+  
+  .text-lg {
+    font-size: 2.5rem !important;
+  }
+  
+  .text-xl {
+    font-size: 5rem !important;
+  }
+  
+  .border-black {
+    border: 1px solid black;
+  }
+  
+  .border-black-top {
+    border-top: 1px solid black;
+  }
+  
+  .border-bottom-black {
+    border-bottom: 1px solid black !important;
+    color: #262f0d;
+    font-family: "Montserrat";
+  }
+  
+  .corner-med {
+    border-radius: 5px;
+  }
+  
+  .background-clear {
+    background: transparent;
+  }
+  
+  .scroll {
+    overflow: scroll;
+  }
+  
+  .flex-row {
+    display: flex;
+    flex-flow: row wrap;
+  }
+  
+  .flex-row-no {
+    display: flex;
+    flex-flow: row nowrap;
+  }
+  
+  .flex-col {
+    display: flex;
+    flex-flow: column wrap;
+  }
+  
+  .justify-space-between {
+    justify-content: space-between;
+  }
+  
+  .align-start {
+    align-items: flex-start;
+  }
+  
+  .pointer {
+    cursor: pointer;
+  }
+  
+  .font-300 {
+    font-weight: 300;
+  }
+  
+  .font-400 {
+    font-weight: 400;
+  }
+  
+  .font-500 {
+    font-weight: 500;
+  }
+  
+  .font-700 {
+    font-weight: 700;
+  }
+  
+  .font-s-1 {
+    font-size: 1rem;
+  }
+  
+  .font-s-125 {
+    font-size: 1.25rem;
+  }
+  
+  .font-s-25 {
+    font-size: 2.5rem !important; 
+  }
+  
+  .font-s-3 {
+    font-size: 3rem;
+  }
+  
+  .font-s-4 {
+    font-size: 4rem;
+  }
+  
+  .font-s-5 {
+    font-size: 5rem !important;
+  }
+  
+  .font-s-7 {
+    font-size: 7rem;
+  }
+  
+  .font-s-10 {
+    font-size: 10rem;
+  }
+  
+  .italic {
+    font-style: italic;
+  }
+  
+  .underline {
+    text-decoration: underline;
+    text-decoration-thickness: from-font;
+    text-underline-offset: 0.2rem;
+  }
+
+  .border-light {
+      border: 1px solid #e0e0e0;
+  }
+  
+  @media only screen and (max-width: 600px) {
+    .desktop-display {
+      display: none;
+    }
+  
+    .flex-col-mob {
+      display: flex;
+      flex-flow: column;
+    }
+  
+  }
