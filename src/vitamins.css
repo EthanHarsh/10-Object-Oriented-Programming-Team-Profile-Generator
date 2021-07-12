@@ -129,10 +129,19 @@
   .w-25 {
     width: 25% !important;
   }
+
+  .w-25vw {
+    width: 25vw !important;
+    min-width: 300px;
+  }
   
   
   .w-33 {
     width: 33% !important;
+  }
+
+  .w-33vw {
+    width: 33vw !important;
   }
   
   .w-65 {
