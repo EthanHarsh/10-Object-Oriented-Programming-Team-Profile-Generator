@@ -7,7 +7,8 @@
     "lib": "lib"
   },
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "devStart": "nodemon index.js"
   },
   "repository": {
     "type": "git",
@@ -20,9 +21,11 @@
   },
   "homepage": "https://github.com/EthanHarsh/10-Object-Oriented-Programming-Team-Profile-Generator#readme",
   "dependencies": {
+    "adm-zip": "^0.5.5",
     "inquirer": "^8.1.1"
   },
   "devDependencies": {
-    "jest": "^27.0.6"
+    "jest": "^27.0.6",
+    "nodemon": "^2.0.12"
   }
 }
