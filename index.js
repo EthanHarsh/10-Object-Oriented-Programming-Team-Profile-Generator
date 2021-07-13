@@ -49,7 +49,7 @@ function engineerLoop() {
     inq
         .prompt(engineerQuestions)
         .then((answers) => {
-            let newEng = new Engineer(answers.name, answers.employee_id, answers.email, answers.gitHub);
+            let newEng = new Engineer(answers.name, answers.employee_id, answers.email, answers.github);
             engineers.push(newEng);
             mainLoop();
         })
@@ -86,6 +86,7 @@ function createTeamFile() {
     let i = 0;
     engineers.forEach(el => {
         let engCode = buildEngineer(el, i);
+        console.log(el)
         code = code + engCode;
         i++;
     })
@@ -98,7 +99,7 @@ function createTeamFile() {
 
     code = code + pageModel.end;
 
-    fs.writeFileSync('./src/index.html', code, err => {
+    fs.writeFileSync('./dist/index.html', code, err => {
         if (err) {
             console.log('Something went wrong writing the file 🥲')
             console.log(`This is what the computer said...`)
@@ -106,8 +107,7 @@ function createTeamFile() {
             return
         }
     })
-
-    zipFiles();
+    console.log(`File written 😁`)
 }
 
 
@@ -119,7 +119,9 @@ function buildManager() {
     let lineID = `<ul class="border-light p-1">
     <li class="m-1-top" id="manager-id_num">ID: ${manager.getId()}</li>`
     let lineEmail = `<li class="m-1-top" id="manager-email"><a href="mailto: ${manager.getEmail()}">Email: ${manager.getEmail()}</a></li>`
-    let lineOffice = `<li class="m-1-vert" id="manager-office">Office Number: ${manager.officeNumber}</li></ul>`
+    let lineOffice = `<li class="m-1-vert" id="manager-office">Office Number: ${manager.getOfficeNumber()}</li></ul>`
+
+    //console.log(manager.getOfficeNumber());
 
     managerCard = managerCard + lineName + lineRole + lineID + lineEmail + lineOffice + pageModel.cardEnd;
 
@@ -130,11 +132,13 @@ function buildEngineer(el, i) {
     let lineName = `<span class="card-title font-s-25" id="engineer${i}-name">${el.getName()}</span>`;
     let lineRole = `<span class="card-title font-s-1" id="engineer${i}-title">${el.getRole()}</span>`;
     let lineID = `<ul class="border-light p-1">
-    <li class="m-1-top" id="engineer${i}-id_num">ID: ${el.getID()}</li>`
+    <li class="m-1-top" id="engineer${i}-id_num">ID: ${el.getId()}</li>`
     let lineEmail = `<li class="m-1-top" id="engineer${i}-email"><a href="mailto: ${el.getEmail()}">Email: ${el.getEmail()}</a></li>`
-    let lineGithub = `<li class="m-1-vert" id="engineer${i}-github">GitHub: <a href=${el.gitHub} target="_blank">${el.gitHub}</a></li></ul>`
+    let lineGithub = `<li class="m-1-vert" id="engineer${i}-github">GitHub: <a href=${el.getGithub()} target="_blank">${el.getGithub()}</a></li></ul>`
 
-    let card = pageModel.cardStart + lineName + lineRole + lineID + lineEmail + lineOffice + pageModel.cardEnd;
+    //console.log(el.getGithub())
+
+    let card = pageModel.cardStart + lineName + lineRole + lineID + lineEmail + lineGithub + pageModel.cardEnd;
 
     return card
 }
@@ -143,20 +147,11 @@ function buildIntern(el, i) {
     let lineName = `<span class="card-title font-s-25" id="intern${i}-name">${el.getName()}</span>`;
     let lineRole = `<span class="card-title font-s-1" id="intern${i}-title">${el.getRole()}</span>`;
     let lineID = `<ul class="border-light p-1">
-    <li class="m-1-top" id="intern${i}-id_num">ID: ${el.getID()}</li>`
-    let lineEmail = `<li class="m-1-top" id=intern${i}-email"><a href="mailto: ${el.getEmail()}">Email: ${el.getEmail()}</a></li>`
-    let lineGithub = `<li class="m-1-vert" id="intern${i}-school">School: ${el.school}</li></ul>`
+    <li class="m-1-top" id="intern${i}-id_num">ID: ${el.getId()}</li>`
+    let lineEmail = `<li class="m-1-top" id=intern${i}-email">Email: <a href="mailto: ${el.getEmail()}">${el.getEmail()}</a></li>`
+    let lineSchool = `<li class="m-1-vert" id="intern${i}-school">School: ${el.school}</li></ul>`
 
-    let card = pageModel.cardStart + lineName + lineRole + lineID + lineEmail + lineOffice + pageModel.cardEnd;
+    let card = pageModel.cardStart + lineName + lineRole + lineID + lineEmail + lineSchool + pageModel.cardEnd;
 
     return card
-}
-
-function zipFiles() {
-    const file = new AdmZip();
-
-    file.addFile('./src/index.html');
-    file.addFile('./src/vitamins.css');
-
-    fs.writeFileSync('./dist/team.zip', file.toBuffer());
 }
