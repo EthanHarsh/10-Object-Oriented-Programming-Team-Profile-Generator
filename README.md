@@ -9,7 +9,7 @@
 ## Description
 Keep track of your team with a great team page!
 
-Project Goals:
+## Project Goals:
 - Write and Pass Jest Tests
 - Ask questions with Inquirer
 - Write Team Page HTML Document
