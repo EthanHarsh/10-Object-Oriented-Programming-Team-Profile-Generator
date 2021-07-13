@@ -37,7 +37,7 @@ function init() {
 }
 
 function mainLoop() {
-    console.log(manager.getRole());
+    //console.log(manager.getRole());
     inq
         .prompt(loopQuestion)
         .then((answers) => {
@@ -86,7 +86,7 @@ function createTeamFile() {
     let i = 0;
     engineers.forEach(el => {
         let engCode = buildEngineer(el, i);
-        console.log(el)
+        //console.log(el)
         code = code + engCode;
         i++;
     })
